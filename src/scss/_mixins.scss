@@ -1,4 +1,5 @@
 $minIphone: 500px;
+$minIphoneLand: 700px;
 $maxIphone: 690px;
 $minTablet: $minIphone + 1;
 $maxTablet: 1120px;
@@ -13,7 +14,7 @@ $maxTablet: 1120px;
       @content;
     }
   } @else if $device == "iphone-l" {
-    @media screen and (min-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
+    @media screen and (min-width: $minIphoneLand) and (max-width: $maxIphone) and (orientation: landscape) {
       @content;
     }
   } @else if $device == "ipad-l" {
