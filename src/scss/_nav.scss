@@ -1,29 +1,19 @@
 .nav {
+  height: 75px;
+  width: 100%;
+  background-color: white;
   position: fixed;
-  top: 0;
-  right: 0;
-  background-color: rgba(231, 71, 60, 0.95);
-  width: 100vw;
-  height: 35%;
-  z-index: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;
-  -ms-flex-align: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav-main {
-  position: fixed;
-  top: 1%;
-  left: 50%;
-  /* transform: translate(-1%, 1%); */
+.nav-ul__1 {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.22em;
   display: flex;
-  width: 400px;
-  height: 150px;
-  align-items: center;
-  span {
-    white-space: nowrap;
-    color: white;
-    font-size: 2em;
+  li {
+    margin: 0 10px;
   }
 }
