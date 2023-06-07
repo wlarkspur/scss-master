@@ -11,6 +11,7 @@ body {
   text-rendering: optimizeLegibility;
   height: 500vh;
   display: flex;
+  margin-left: 33%;
 }
 
 main {
@@ -30,4 +31,8 @@ main {
   height: 100px;
   background-color: blue;
   z-index: -10;
+  h2 {
+    font-size: 8em;
+    color: aliceblue;
+  }
 }
