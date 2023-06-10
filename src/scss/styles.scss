@@ -1,11 +1,12 @@
 @import "nav";
 @import "reset.scss";
 @import "banner";
+@import "shopnames";
+/* @import "banner"; */
 
 /* * {
   box-sizing: border-box;
 } */
-
 body {
   font-family: "Courier New", Courier, monospace;
   font-size: 16px;
@@ -15,119 +16,54 @@ body {
 }
 
 .shopify__section {
-  display: block;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 3em 0em;
+}
+
+.shopify__section-subItem {
   margin: 0 3em 3em 3em;
+  display: flex;
 }
 
-.banner__main {
-  background-image: url("/img/1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 90vw;
-  height: 90vh;
+.subItem__container {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  height: 100%;
+}
+
+.subItem {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  background-color: red;
   justify-content: center;
-  color: white;
-  .banner__main-text {
-    width: 30%;
-    span {
-      display: flex;
-      justify-content: center;
-      font-size: 0.8em;
-      margin-bottom: 2em;
-    }
-    p {
-      line-height: 1em;
-      font-size: x-large;
-      font-weight: 800;
-      display: block;
-      em {
-        font-style: italic;
-        font-weight: 200;
-      }
-    }
+  margin-top: 20px;
+  .subItem__img:first-child {
+    width: 50%;
+    height: auto;
+    background-image: url("/img/디스코볼.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-}
-
-.shop__name {
-  font-family: proxima-nova, Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 0.7em;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1em;
-}
-.shop__name-description {
-  font-family: freight-display-pro, Times New Roman, serif;
-  font-weight: 500;
-  font-size: 1.3em;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2em;
-}
-
-.shop__name-list {
-  img {
-    width: 200px;
-    height: 200px;
-    &:hover {
-      transition: ease-in-out 0.3s;
-      transform: scale(1.05);
-    }
+  .subItem__img:last-child {
+    width: 50%;
+    height: auto;
+    background-image: url("/img/디스코볼 사이드.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
-  .shop__name-item {
-    font-family: freight-display-pro, Times New Roman, serif;
-    display: flex;
-    flex-direction: column;
-    line-height: 1.5em;
-    align-items: center;
-    .shop__name-product {
-      font-style: italic;
-      font-size: 1.2em;
-      display: flex;
-      justify-content: center;
-    }
-    .shop__name-price {
-      font-family: proxima-nova, Helvetica, Arial, sans-serif;
-      font-size: 0.7em;
-      display: flex;
-      color: #414141;
-      justify-content: center;
-    }
-    .add-cart {
-      margin-top: 1em;
-      width: 180px;
-      height: 40px;
-      border: 1px solid gray;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: proxima-nova, Helvetica, Arial, sans-serif;
-      font-size: 0.7em;
-      font-weight: 500;
-      &:hover {
-        background-color: #414141;
-        color: #fff;
-        transition: background-color 0.3s;
-      }
-    }
-    .shop__name-des {
-      font-family: proxima-nova, Helvetica, Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      span:nth-child(1) {
-        font-size: 0.5em;
-      }
-      span:nth-child(2) {
-        color: #cfa102;
-        font-size: 0.5em;
-      }
-    }
+  .subItem__img-2:first-child {
+    width: 50%;
+    height: auto;
+    background-image: url("/img/손매니큐어Sample.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .subItem__img-2:last-child {
+    width: 50%;
+    height: auto;
+    background-image: url("/img/손매니큐어Sample_사이드.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
