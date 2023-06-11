@@ -47,7 +47,7 @@ body {
   }
   a {
     text-decoration: none;
-
+    color: rgb(138, 133, 133);
     &:visited {
       color: rgb(138, 133, 133);
     }
@@ -94,11 +94,6 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      li {
-        &:first-child {
-          color: red;
-        }
-      }
     }
   }
 }
