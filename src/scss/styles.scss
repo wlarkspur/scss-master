@@ -1,99 +1,175 @@
-@import "nav";
+@import "variables";
 @import "reset.scss";
-@import "banner";
-@import "shopnames";
-@import "subItem";
-@import "section3";
 
-/* @import "banner"; */
-
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 
 body {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 16px;
-  line-height: 100%;
-  color: #414141;
-  letter-spacing: 0.025em;
-}
-
-.shopify__section {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 3em 0em;
-}
-
-.shopify__section-subItem {
-  margin: 0 3em 3em 3em;
-  display: flex;
-}
-
-.subItem__container {
-  display: flex;
-  height: 100%;
-}
-
-.follow {
-  display: flex;
-
-  font-size: 30px;
-  margin-top: 0.3em;
-  font-family: "freight-display-pro", "Times New Roman", serif;
-  p {
-    color: rgb(68, 67, 67);
-    margin-right: 0.3em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+  background-color: white;
+  grid-template-columns: 1.2fr 1.5fr 1.2fr;
+  grid-template-rows: 0.6fr 5fr 0.6fr;
+  display: grid;
+  gap: 1px;
+  font-size: 10px;
+  & > *:not(script) {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $bg;
+    font-size: 22px;
+    text-transform: uppercase;
   }
-  a {
-    text-decoration: none;
-    color: rgb(138, 133, 133);
-    &:visited {
-      color: rgb(138, 133, 133);
+}
+.header {
+  font-size: 20px;
+  font-weight: bold;
+  display: grid;
+  justify-content: stretch;
+  grid-area: 1 / 1 / 1 /4;
+
+  height: 13.2vh;
+  height: 100%;
+  .header-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1.2fr;
+    grid-area: 1/ 1/1/4;
+    height: 100%;
+
+    .header__menu:nth-child(1) {
+      grid-column-start: 1;
+    }
+    .header__menu:nth-child(2) {
+      grid-column-start: 2;
+      box-shadow: 0 0 0 1px $bg;
+    }
+    .header__menu:nth-child(3) {
+      grid-column-start: 3;
+    }
+  }
+
+  /* .header-container {
+    display: grid;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    .header__menu {
+      &:nth-child(1) {
+        box-shadow: 0 0 0 1px $bg;
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      &:nth-child(2) {
+        grid-area: 1 / 2 / 2 / 3;
+        background-color: red;
+      }
+      &:nth-child(3) {
+        box-shadow: 0 0 0 1px $bg;
+        grid-area: 1 / 3 / 2 / 4;
+      }
+    }
+  } */
+  .header__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+
+    /* box-shadow: 0 0 0 1px $bg; */
+  }
+}
+
+.grid-container-left {
+  color: $bg;
+  font-size: 20px;
+  font-weight: bold;
+  grid-area: 2 / 1 / 7 / 2;
+  background-color: $bg;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  box-shadow: 0 0 0 1px $bg;
+  cursor: pointer;
+  .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: color 0.3s linear;
+    &:hover {
+      background-color: $bg;
+      color: white;
     }
   }
 }
 
-.shopify__section-footer {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin: 0 0 3em 0;
-  background-color: #f3ede8;
+.center-image {
+  grid-area: 2 / 2 / 7 / 3;
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/HolyokeHirsch_10-768x768.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.grid-container-right {
+  color: $bg;
+
+  font-size: 20px;
+  font-weight: bold;
+  grid-area: 2 / 3 / 7 / 4;
+  background-color: $bg;
+  display: grid;
+  gap: 1px;
+  align-items: stretch;
+  grid-template-columns: 1fr;
+  box-shadow: 0 0 0 1px $bg;
+  /* border-left: 1px solid $bg; */
+  cursor: pointer;
+  .number {
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: color 0.3s linear background-color 0.3s linear;
+    &:hover {
+      background-color: $bg;
+      color: white;
+    }
+  }
 }
 
 .footer {
-  display: flex;
-  width: 100%;
-  margin: 3em 3em;
-  justify-content: space-evenly;
-  .footer__columns {
-    &:nth-child(1) {
-      border-right: 1px solid #3d3c3c;
-    }
-    &:nth-child(3) {
-      border-left: 1px solid #3d3c3c;
-    }
+  height: 13.4vh;
+  font-size: 20px;
+  font-weight: bold;
+  grid-area: 7 / 1 / 8 / 4;
+  background-color: white;
+  box-shadow: 0 0 0 1px $bg;
+  display: grid;
+  grid-column: 2 /3;
+  overflow: hidden;
+  white-space: nowrap;
+  span {
+    animation: scrollText 5s linear infinite;
   }
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.5em;
-    width: 100%;
-  }
+}
 
-  .footer__label {
-    color: rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
+@keyframes scrollText {
+  0% {
+    transform: translateX(-250px);
   }
-  .footer__columns {
-    ul {
-      font-size: 0.5em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  50% {
+    transform: translateX(250px);
+  }
+  100% {
+    transform: translateX(-250px);
   }
 }
