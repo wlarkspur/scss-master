@@ -1,0 +1,71 @@
+.section__header {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 7%;
+  z-index: 1;
+}
+
+.section__header-left {
+  text-transform: uppercase;
+  font-size: 24px;
+  height: 100%;
+  width: 66.8%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: whitesmoke;
+    transition: linear 0.1s;
+    cursor: pointer;
+  }
+  :nth-child(1) {
+    font-weight: bold;
+    color: black;
+    margin-right: 8em;
+  }
+  :nth-child(2) {
+    margin-right: 30px;
+  }
+  :nth-child(3) {
+    margin-right: 30px;
+  }
+}
+
+.section__header-right {
+  display: flex;
+  height: 100%;
+  width: 33.3%;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: lowercase;
+  font-size: 28px;
+  color: rgba(0, 0, 0, 1);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: whitesmoke;
+    transition: linear 0.1s;
+    cursor: pointer;
+  }
+  :nth-child(1) {
+    padding-left: 10px;
+    height: 80%;
+    margin-right: 10px;
+  }
+  :nth-child(2) {
+    height: 80%;
+    margin-right: 50%;
+  }
+  :nth-child(3) {
+    margin-right: 10%;
+    display: flex;
+    height: 80%;
+    align-items: flex-end;
+    font-size: 15px;
+  }
+}
