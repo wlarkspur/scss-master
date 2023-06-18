@@ -5,4 +5,5 @@ Front-end // Website SCSS Clone practice 🤪
 #part3: http://www.z-o-o.fr/ [v]
 #part4: https://schwartzmedia.com.au/#arrow [v]
 #part5: https://tolv.dk [v]
-#part6: https://rodicdavidson.co.uk/ [ ] ing....
+#part6: https://rodicdavidson.co.uk/ [v]
+#part7: https://beige.de/ []ing...
