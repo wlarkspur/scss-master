@@ -12,82 +12,109 @@ a {
   }
 }
 
-body {
+body::-webkit-scrollbar {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
   height: 200vh;
-}
+  -ms-overflow-style: none;
 
+  position: relative;
+}
+header {
+  position: fixed;
+  /*  margin-top: 30px;
+  margin-left: 50px; */
+  svg {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+  }
+}
 .wrapper {
   h1 {
     font-size: 2.4em;
     font-family: "Open Sans", sans-serif;
   }
-  margin: 0 2%;
-  margin-top: 2%;
+  width: inherit;
+  height: 100%;
+  margin: 0 6%;
+  margin-top: 0%;
+  margin-right: 180px;
+  padding-right: 6%;
 }
 
-.projects {
-  margin-top: 10%;
-  width: 100%;
+.nav {
   display: flex;
-  flex-direction: column;
-  .label__box {
-    display: flex;
-  }
-  label {
-    display: flex;
-    &:nth-child(1) {
-      width: 10%;
-    }
-    &:nth-child(2) {
-      width: 40%;
-    }
-    &:nth-child(3) {
-      width: 50%;
-    }
-  }
-  .projects__items {
-    display: flex;
-
-    .projects__item {
-      display: flex;
-      width: 100%;
-      font-size: 1.3em;
-      padding-top: 25px;
-      margin-top: 10px;
-      margin-bottom: 5px;
-      border-top: 1px solid rgba(0, 0, 0, 0.8);
-      h4 {
-        display: flex;
-        &:nth-child(1) {
-          width: 10%;
-        }
-        &:nth-child(2) {
-          width: 40%;
-        }
-        &:nth-child(3) {
-          width: 50%;
-        }
-      }
-    }
-  }
-}
-
-.education {
-  margin-top: 50px;
-}
-.education__text {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
   div {
+    width: 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     display: flex;
-    align-items: flex-start;
-    span {
-      font-size: 0.6em;
-      margin-right: 8px;
-    }
     p {
+      top: 80px;
+      position: absolute;
       font-size: 1.2em;
     }
+    span {
+      font-size: 1.2em;
+      font-weight: 500;
+      transform: rotate(90deg);
+    }
   }
+  div:nth-child(1) {
+    background-color: #5ea3ec;
+  }
+  div:nth-child(2) {
+    background-color: #f64444;
+  }
+  div:nth-child(3) {
+    background-color: #ffb400;
+  }
+}
+
+.main__text {
+  margin-top: 250px;
+  font-size: 4.5em;
+  line-height: 1.2em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 140px;
+  span:nth-child(2) a:not(:nth-child(3)) {
+    background-image: repeating-linear-gradient(
+        -45deg,
+        #ffb400,
+        #ffb400 1px,
+        transparent 0,
+        transparent 12px
+      ),
+      repeating-linear-gradient(
+        45deg,
+        #ffb400,
+        #ffb400 1px,
+        transparent 0,
+        transparent 12.2px
+      );
+    background-size: 17px 10px;
+    background-repeat: repeat-x;
+    background-position: 0 103%, 2px 103%;
+    animation: 0.8s infinite normal b;
+    animation-timing-function: ease-in-out;
+  }
+}
+.main__img {
+  background-color: #5ea3ec;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-image: url("https://images.prismic.io/canalstreetmarket/1d99cf0e3a0144c1229f92ee5b3c63b0eaae893c_home-hero.jpg?auto=compress,format");
+  background-size: cover;
+  background-position: center;
+  left: 0;
+  height: 500px;
 }
