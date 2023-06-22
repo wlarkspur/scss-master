@@ -18,6 +18,123 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 100%;
   -ms-overflow-style: none;
-
   position: relative;
+}
+
+header {
+  img {
+    height: 800px;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+main {
+  width: 100%;
+}
+.header-category {
+  display: flex;
+  height: 1200px;
+  max-height: 600px;
+  max-width: 100%;
+  width: 100%;
+  div {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+.grid-items {
+  span {
+    display: flex;
+    margin: 50px 0 10px 10px;
+    font-size: 2em;
+  }
+  div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    column-gap: 5px;
+    margin: 0 5px;
+    img {
+      width: 100%;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      span {
+        width: 100%;
+        height: 50px;
+        margin: 10px;
+      }
+      p {
+        height: 50px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: black;
+  color: white;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  p {
+    font-size: 1.5em;
+  }
+  span {
+    font-size: 2.3em;
+    font-weight: bold;
+  }
+  svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  div {
+    display: flex;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+  .header-category {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    div {
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@media (min-width: 1000px) {
+  .header-category {
+    div img {
+      width: 100%;
+      height: 800px;
+    }
+  }
 }
