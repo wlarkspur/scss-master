@@ -8,5 +8,5 @@ Front-end // Website SCSS Clone practice 🤪
 #part6: https://rodicdavidson.co.uk/ [v]
 #part7: https://beige.de/ [v]
 #part8: http://donicaida.com/[v]
-#part9: https://canalstreet.market/ []ing
-#part10: https://wonhundred.com/[]
+#part9: https://canalstreet.market/ [v]
+#part10: https://wonhundred.com/[]ing
