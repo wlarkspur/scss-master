@@ -9,4 +9,4 @@ Front-end // Website SCSS Clone practice 🤪
 #part7: https://beige.de/ [v]
 #part8: http://donicaida.com/[v]
 #part9: https://canalstreet.market/ [v]
-#part10: https://wonhundred.com/[]ing
+#part10: https://wonhundred.com/[v]
